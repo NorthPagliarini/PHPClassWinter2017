@@ -5,6 +5,7 @@
         <title></title>
     </head>
     <body>
+        
         <?php
         include './dbconnect.php';
         include './functions.php';
@@ -13,12 +14,12 @@
         $results = '';
 
         if (isPostRequest()) {
-            $dataone = filter_input(INPUT_POST, 'dataone');
-            $datatwo = filter_input(INPUT_POST, 'datatwo');
+            $fname = filter_input(INPUT_POST, 'fname');
+            $lname = filter_input(INPUT_POST, 'lname');
 
-            $isItTrue = createTestData($dataone, $datatwo);
+            $isItTrue = createActorData($fname, $lname);
             
-            if(isItTrue == true)
+            if($isItTrue === true)
             {
                 $results = 'Data Add Successful!';
             }
@@ -34,9 +35,9 @@
         <h1><?php echo $results; ?></h1>
 
         <form method="post" action="#">            
-            Data one <input type="text" value="" name="dataone" />
+            Data one <input type="text" value="" name="fname" />
             <br />
-            Data two <input type="text" value="" name="datatwo" />
+            Data two <input type="text" value="" name="lname" />
             <br />
             Date <input type="date" value="" name="date" />
             <br />

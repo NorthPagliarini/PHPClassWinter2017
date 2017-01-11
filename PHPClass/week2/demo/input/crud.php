@@ -16,7 +16,7 @@ function createTestData($dataone, $datatwo)
     
     if ($stmt->execute($binds) && $stmt->rowCount() > 0)
     {
-        $results = true;
+        $result = true;
     }
     
     return $result;  
