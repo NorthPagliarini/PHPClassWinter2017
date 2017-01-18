@@ -1,10 +1,8 @@
 <?php
 
 //Create Data for Actor test
-function createActorData($fname, $lname) 
+function createActorData($fname, $lname, $dob, $height) 
 {
-    $dob = 123456;
-    $height = 12;
     
     $result = false;
     

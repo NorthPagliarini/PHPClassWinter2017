@@ -2,8 +2,15 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Assignment 2</title>
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     </head>
+    <h1>PHP Assignment 2</h1>
+    <h3>North Pagliarini</h3>
     <body>
         <?php
         /*
@@ -19,12 +26,14 @@
         $results = readAllFromActor();
         ?>
 
-        <table>
+        <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Data One</th>
-                    <th>Data Two</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Date of Birth</th>
+                    <th>Height</th>
                 </tr>
             </thead>
             <tbody>
@@ -46,12 +55,15 @@
             <?php foreach ($results as $row): ?>
                 <tr>
                     <td><?php echo $row['id']; ?></td>
-                    <td><?php echo $row['dataone']; ?></td>
-                    <td><?php echo $row['datatwo']; ?></td>            
+                    <td><?php echo $row['firstname']; ?></td>
+                    <td><?php echo $row['lastname']; ?></td>
+                    <td><?php echo $row['dob']; ?></td>
+                    <td><?php echo $row['height']; ?></td>
                 </tr>
             <?php endforeach; ?>
             </tbody>
         </table>
+        <a href="Add.php?id=<?php echo $row['id']; ?>">Add an Actor</a>  
 
     </body>
 </html>
