@@ -59,8 +59,8 @@
             <br />
             
 
-            <input type="submit" value="Submit" class="btn btn-success" />
+            <input type="submit" value="Add" class="btn btn-warning" />
         </form>
-        <a href="view-action.php?id=<?php echo $row['id']; ?>">Back to view</a> 
+        <a href="view-action.php?id=<?php echo $row['id']; ?> " button type="button" class="btn btn-default">Back to view</a> 
     </body>
 </html>
